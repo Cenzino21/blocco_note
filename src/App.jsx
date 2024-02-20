@@ -19,28 +19,18 @@ function App() {
       <div class="contenitore">
         <div id="parteNote">
           <h3>Elenco note</h3>
-          <ol>
-            <li class="numeriDelleNote"></li>
-            <li class="numeriDelleNote"></li>
-            <li class="numeriDelleNote"></li>
-            <li class="numeriDelleNote"></li>
-            <li class="numeriDelleNote"></li>
-          </ol>
+          <button type="button">Aggiungi nota</button>
+          <div>
+            <p>Nota 1</p>
+            <p>Nota 2</p>
+            <p>Nota 3</p>
+          </div>
         </div>
         <div id="parteTesto">
-          <h3>Elenco testi</h3>
-          <input type="text" class="inserimentoTesto"></input> 
-          <button type="button">Elimina</button> <br/>
-          <input type="text" class="inserimentoTesto"></input> 
-          <button type="button">Elimina</button> <br/>
-          <input type="text" class="inserimentoTesto"></input>
-          <button type="button">Elimina</button> <br/>
-          <input type="text" class="inserimentoTesto"></input>
-          <button type="button">Elimina</button> <br/>
-          <input type="text" class="inserimentoTesto"></input>
-          <button type="button">Elimina</button> <br/>
+          <input type="text" placeholder="Titolo" id="inserimentoTitolo"></input>
+          <input type="text" placeholder="Testo" id="InserimentoTesto"></input>
         </div>
-        </div>
+      </div>
     </div>
   );
 }

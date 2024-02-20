@@ -1,31 +1,39 @@
+body, html {
+  background-color: #808080;
+}
+
 #messaggioDiBenvenuto {
-  color: #ff0000;
+  color: #ffffff;
   text-align: center;
   font-family: cursive;
 }
 
 .contenitore{
-  position: absolute;
+  border: 3px solid #ffffff;
   display: flex;
-  width: 100%;
+  width: 95%;
   height: 100%;
+  margin-left: 30px;
+  border-radius: 10px;
 }
 
-.numeriDelleNote {
-  padding: 1px;
-}
 
 #parteNote {
-  background-color: #ffff00;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
   width: 10%;
-  border: 1px solid #000000;
+  padding: 5px;
 }
 
 #parteTesto {
-  background-color: #add8e6;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  background-color: #ffffff;
   color: #0000ff;
   width: 90%;
-  border: 1px solid #000000;
+  margin-left: 10px;
 }
 
 .inserimentoTesto {
