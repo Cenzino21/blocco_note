@@ -1,5 +1,7 @@
 #messaggioDiBenvenuto {
-  color: red;
+  color: #ff0000;
+  text-align: center;
+  font-family: cursive;
 }
 
 .contenitore{
@@ -9,17 +11,32 @@
   height: 100%;
 }
 
+.numeriDelleNote {
+  padding: 1px;
+}
+
 #parteNote {
-  background-color: yellow;
-  width: 20%;
+  background-color: #ffff00;
+  width: 10%;
+  border: 1px solid #000000;
 }
 
 #parteTesto {
-  background-color: lightblue;
-  color: blue;
-  width: 80%;
+  background-color: #add8e6;
+  color: #0000ff;
+  width: 90%;
+  border: 1px solid #000000;
 }
 
 .inserimentoTesto {
-  width: 100%;
+  border: none;
+  width: 80%;
+  background-color: #add8e6;
+  color: #0000ff;
+  border-bottom: 1px solid #0000ff; /*Per far uscire sottolineato la casella di testo*/
+}
+
+button:hover {
+  background-color: #d3d3d3;
+  color: #ff0000;
 }
