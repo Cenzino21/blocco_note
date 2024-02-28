@@ -1,5 +1,4 @@
-function TitoliDiCoda() {
-  const messaggioConclusivo = "Questo è il mio primo lavoro in React 😎";
+export default function TitoliDiCoda({messaggioConclusivo}) {
   return (
     <footer>
       <div>{messaggioConclusivo}</div>
@@ -7,4 +6,3 @@ function TitoliDiCoda() {
   );
 }
 
-export default TitoliDiCoda;

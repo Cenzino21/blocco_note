@@ -1,8 +1,6 @@
-function Titolo() {
-  const titoloNote = "Elenco note"
+export default function Titolo({titoloNote}) {
   return (
     <div className="introduzioneAdElencoNote">{titoloNote}</div>
   )
 }
 
-export default Titolo;

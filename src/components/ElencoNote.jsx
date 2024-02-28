@@ -1,20 +1,22 @@
-//import { useState } from "react";
+import { useState } from "react";
 import Titolo from "./Titolo";
 
-function ElencoNote() {
-  const note = ["Nota 1", "Nota 2", "Nota 3", "Nota 4", "Nota 5"];
-  const elencoNote = note.map((nota) => 
-    <li>{nota}</li>
-  );
+const titoloNote = "Elenco note";
+
+export default function ElencoNote({note}) {
   return(
     <div className="parteNote">
-      <Titolo />
+      <Titolo titoloNote={titoloNote} />
       <button type="button">Aggiungi nota</button>
       <div>
-        <div>{elencoNote}</div>
+        <div>
+          {note.map((nota) => 
+          <div><button type="button">{nota}</button></div>)}
+        </div>
       </div>
     </div>
   )
 }
 
-export default ElencoNote;
+//passing data between components
+

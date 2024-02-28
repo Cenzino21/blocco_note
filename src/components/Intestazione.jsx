@@ -1,8 +1,6 @@
-function Intestazione() {
-  const messaggioDiInizio = "Ciao Bro, ecco qua il tuo blocco note!!!"
+export default function Intestazione({messaggioDiInizio}) {
   return (
     <header className="messaggioDiBenvenuto"><div>{messaggioDiInizio}</div></header>
   )
 }
 
-export default Intestazione;
