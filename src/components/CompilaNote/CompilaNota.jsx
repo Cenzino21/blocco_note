@@ -1,14 +1,15 @@
-import { useState } from "react"
+//import { useState } from "react";
+//import {nuoveNote} from "../../App";
+import Contenuto from "./Contenuto";
+import DataOra from "./DataOra";
+import TitoloNota from "./TitoloNota";
 
 export default function CompilaNota() { 
-  
   return (
     <div className="parteTesto">
-      <input type="text" placeholder="Titolo" className="inserimentoTitolo"></input>
-      <div className="dataOra">
-        <div>Data: </div> <div>Ora: </div>
-      </div>
-      <input type="text" placeholder="Testo" className="inserimentoTesto"></input>
+      <TitoloNota />
+      <DataOra />
+      <Contenuto />
     </div>
   )
 }
