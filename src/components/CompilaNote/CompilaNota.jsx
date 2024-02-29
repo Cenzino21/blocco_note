@@ -1,10 +1,8 @@
-//import { useState } from "react";
-//import {nuoveNote} from "../../App";
 import Contenuto from "./Contenuto";
 import DataOra from "./DataOra";
 import TitoloNota from "./TitoloNota";
 
-export default function CompilaNota() { 
+export default function CompilaNota({note}) { 
   return (
     <div className="parteTesto">
       <TitoloNota />
