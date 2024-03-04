@@ -5,17 +5,7 @@ import React from "react"
 export default function CompilaNota(props) { 
   return (
     <div className="parteTesto">
-      <div>
-        {props.notaSelezionata.map((nota) =>
-        <div> 
-          <input type="text" placeholder="Titolo" className="inserimentoTitolo" value={nota.titoloNota}></input>
-          <div className="dataOra">
-            <div>{nota.data}</div> <div>{nota.ora}</div>
-          </div> 
-          <input type="text" placeholder="Testo" className="inserimentoTesto" value={nota.contenutoNota}></input>
-        </div> 
-        )}
-      </div>
+      <p>{props.notaSelezionata}</p>
     </div>
   )
 }

@@ -22,7 +22,7 @@ export default function App() {
       <header className="messaggioDiBenvenuto">Benvenuto, ecco qua il tuo blocco note!!!</header>
       <div className="contenitore">
         <ElencoNote elencoNote={nuoveNote} setNota={setNotaSelezionata}/>
-        <CompilaNota notaSelezionata={nuoveNote} setNotaSelezionata={setNotaSelezionata}/>
+        <CompilaNota notaSelezionata={notaSelezionata}/>
       </div>
       <footer>
         <div>Questo è il mio primo lavoro in React</div>
