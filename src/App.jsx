@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState } from "react";
 import ElencoNote from "./components/ElencoNote/ElencoNote";
 import CompilaNota from "./components/CompilaNote/CompilaNota";
+//import { useSelector } from 'react-redux';
 
 
 //const note = ["Nota 1", "Nota 2", "Nota 3", "Nota 4", "Nota 5"];
@@ -15,11 +16,13 @@ export const nuoveNote = [
 //Funzione principale
 export default function App() {
   const [notaSelezionata, setNotaSelezionata] = useState();
-  console.log(notaSelezionata)
+  //console.log(notaSelezionata)
+  //const theme = useSelector((state) => state.theme.value);
 
   return (
     <div className="App">
-      <header className="messaggioDiBenvenuto">Benvenuto, ecco qua il tuo blocco note!!!</header>
+      <header className="messaggioDiBenvenuto"><p>Benvenuto, ecco qua il tuo blocco note!!!</p>
+      <div><button type="button" className="bottoneCambiaTema">Cambia tema</button></div> </header>
       <div className="contenitore">
         <ElencoNote elencoNote={nuoveNote} setNota={setNotaSelezionata}/>
         <CompilaNota notaSelezionata={notaSelezionata}/>

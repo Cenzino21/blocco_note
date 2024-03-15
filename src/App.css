@@ -7,6 +7,10 @@
   color: #0000ff;
 }
 
+.bottoneCambiaTema {
+  text-align: center;
+}
+
 .introduzioneAdElencoNote {
   font-weight: bold; /*Grassetto*/
   font-size: 20px;

@@ -3,9 +3,19 @@ import React from "react"
 //import NotaSingola from "./NotaSingola"
 
 export default function CompilaNota(props) { 
+  if (!props.notaSelezionata) {
+    return (
+      <div className="parteTesto">
+        <p>Nessuna nota selezionata</p>
+      </div>
+    );
+  }
   return (
     <div className="parteTesto">
-      <p>{props.notaSelezionata}</p>
+      <p>Titolo: {props.notaSelezionata.titoloNota}</p>
+      <p>Data: {props.notaSelezionata.data}</p>
+      <p>Ora: {props.notaSelezionata.ora}</p>
+      <p>Contenuto: {props.notaSelezionata.contenutoNota}</p>
     </div>
   )
 }
