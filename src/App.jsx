@@ -1,7 +1,11 @@
 import './App.css';
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import ElencoNote from "./components/ElencoNote/ElencoNote";
 import CompilaNota from "./components/CompilaNote/CompilaNota";
+//import CambioColore from './components/Redux/CambioColore';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeTheme } from './components/Redux/themeSlice';
+import { DARK, LIGHT } from './utils/themeConst';
 //import { useSelector } from 'react-redux';
 
 
@@ -16,13 +20,24 @@ export const nuoveNote = [
 //Funzione principale
 export default function App() {
   const [notaSelezionata, setNotaSelezionata] = useState();
-  //console.log(notaSelezionata)
-  //const theme = useSelector((state) => state.theme.value);
+  const theme = useSelector((state) => state.theme);
+  const dispatch = useDispatch();
+  const handleChangeTheme = useCallback(()=> {
+    if(theme.value === DARK) {
+      dispatch(changeTheme(LIGHT));
+    } else {
+      dispatch(changeTheme(DARK));
+    }
+  },[theme, dispatch])
+
+  //console.log(theme.value === "Dark" && "dark");
+  console.log(theme.value);
 
   return (
-    <div className="App">
+    <div className={`App ${theme.value === DARK ? "AppDark" : ""}`}>
       <header className="messaggioDiBenvenuto"><p>Benvenuto, ecco qua il tuo blocco note!!!</p>
-      <div><button type="button" className="bottoneCambiaTema">Cambia tema</button></div> </header>
+      <button type="button" className={`bottoneCambiaTema ${theme.value === "Dark" && "dark"}`} onClick={handleChangeTheme}>Cambia tema</button>
+      </header>
       <div className="contenitore">
         <ElencoNote elencoNote={nuoveNote} setNota={setNotaSelezionata}/>
         <CompilaNota notaSelezionata={notaSelezionata}/>

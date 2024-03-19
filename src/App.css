@@ -7,6 +7,14 @@
   color: #0000ff;
 }
 
+.messaggioDiBenvenutoDark {
+  color: #6c6cf6;
+}
+
+.dark {
+  background-color: black;
+}
+
 .bottoneCambiaTema {
   text-align: center;
 }
