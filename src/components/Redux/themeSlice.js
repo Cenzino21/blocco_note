@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { DARK } from '../../utils/themeConst';
+import { LIGHT } from '../../utils/themeConst';
 
 const initialState={
-  value: DARK
+  value: LIGHT
 };
 const themeSlice = createSlice({
   name: 'theme',

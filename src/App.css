@@ -11,8 +11,9 @@
   color: #6c6cf6;
 }
 
-.dark {
-  background-color: black;
+.bottoneCambiaTemaDark {
+  background-color: red;
+  color: #ffffff;
 }
 
 .bottoneCambiaTema {
@@ -34,6 +35,10 @@
   border-radius: 10px;
 }
 
+.contenitoreDark{
+  border: 2px dotted #000000;
+}
+
 .parteNote {
   display: flex;
   flex-direction: column; /*Dall'alto verso il basso, come una colonna*/
@@ -42,6 +47,10 @@
   padding: 10px;
   gap: 5px;
   overflow: scroll; /*Per scorrere con la barra*/
+}
+
+.parteNoteDark{
+  background-color: #ffff00;
 }
 
 .parteTesto {
@@ -53,12 +62,17 @@
   padding: 10px;
 }
 
+.parteTestoDark{
+  font-weight: bold;
+}
+
 button:hover {
   background-color: #d3d3d3;
   color: #ff0000;
   cursor: pointer;
 }
 
+/*
 .inserimentoTitolo {
   background-color: #ffa500;
   border: none;
@@ -73,18 +87,17 @@ button:hover {
 .inserimentoTesto {
   display: flex;
   border: none;
-  outline: none; /*Senza riquadro di quando vai a schiacciare*/
+  outline: none; /*Senza riquadro di quando vai a schiacciare
   font-size: 15px;
   margin-top: 30px;
   background-color: #ffa500;
 }
 
 .dataOra {
-  color: #000000;
   display: flex;
   flex-direction: row;
   gap: 100px;
-}
+}*/
 
 footer {
   text-align: center;

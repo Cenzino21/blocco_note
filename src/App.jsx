@@ -35,12 +35,13 @@ export default function App() {
 
   return (
     <div className={`App ${theme.value === DARK ? "AppDark" : ""}`}>
-      <header className="messaggioDiBenvenuto"><p>Benvenuto, ecco qua il tuo blocco note!!!</p>
-      <button type="button" className={`bottoneCambiaTema ${theme.value === "Dark" && "dark"}`} onClick={handleChangeTheme}>Cambia tema</button>
-      </header>
-      <div className="contenitore">
-        <ElencoNote elencoNote={nuoveNote} setNota={setNotaSelezionata}/>
-        <CompilaNota notaSelezionata={notaSelezionata}/>
+      <header className={`messaggioDiBenvenuto ${theme.value === DARK ? "messaggioDiBenvenutoDark" : ""}`}>
+        <p>Benvenuto, ecco qua il tuo blocco note!!!</p>
+      <button type="button" className={`bottoneCambiaTema ${theme.value === DARK ? "bottoneCambiaTemaDark" : ""}`} onClick={handleChangeTheme}>
+        Cambia tema</button></header>
+      <div className={`contenitore ${theme.value === DARK ? "contenitoreDark" : ""}`}>
+        <ElencoNote elencoNote={nuoveNote} setNota={setNotaSelezionata} theme={theme.value}/>
+        <CompilaNota notaSelezionata={notaSelezionata} theme={theme.value}/>
       </div>
       <footer>
         <div>Questo è il mio primo lavoro in React</div>

@@ -1,17 +1,18 @@
 //import { nuoveNote } from "../../App"
 import React from "react"
+import { DARK } from "../../utils/themeConst";
 //import NotaSingola from "./NotaSingola"
 
 export default function CompilaNota(props) { 
   if (!props.notaSelezionata) {
     return (
-      <div className="parteTesto">
+      <div className={`parteTesto ${props.theme === DARK ? "parteTestoDark" : ""}`}>
         <p>Nessuna nota selezionata</p>
       </div>
     );
   }
   return (
-    <div className="parteTesto">
+    <div className={`parteTesto ${props.theme === DARK ? "parteTestoDark" : ""}`}>
       <p>Titolo: {props.notaSelezionata.titoloNota}</p>
       <p>Data: {props.notaSelezionata.data}</p>
       <p>Ora: {props.notaSelezionata.ora}</p>

@@ -1,3 +1,4 @@
+import { DARK } from "../../utils/themeConst";
 import Titolo from "../Titolo";
 import React from "react";
 
@@ -5,7 +6,7 @@ const titoloDelleNote = "Elenco note";
 
 export default function ElencoNote(props) {
   return(
-    <div className="parteNote">
+    <div className={`parteNote ${props.theme === DARK ? "parteNoteDark" : ""}`}>
       <Titolo titoloNote={titoloDelleNote} />
       <button type="button">Aggiungi nota</button>
       <div>
