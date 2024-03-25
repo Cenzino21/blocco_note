@@ -72,7 +72,6 @@ button:hover {
   cursor: pointer;
 }
 
-/*
 .inserimentoTitolo {
   background-color: #ffa500;
   border: none;
@@ -87,17 +86,15 @@ button:hover {
 .inserimentoTesto {
   display: flex;
   border: none;
-  outline: none; /*Senza riquadro di quando vai a schiacciare
+  outline: none; /*Senza riquadro di quando vai a schiacciare */
   font-size: 15px;
   margin-top: 30px;
   background-color: #ffa500;
 }
 
-.dataOra {
-  display: flex;
-  flex-direction: row;
-  gap: 100px;
-}*/
+.bottoneDiConferma {
+  width: 20%;
+}
 
 footer {
   text-align: center;
