@@ -5,6 +5,7 @@ export default function ElencoDelleNote({
   setTitolo,
   setContenuto,
 }) {
+  //Devo leggere tutta la lista delle note tramite redux
   return (
     <div>
       {notaCompleta.map((item, index) => {

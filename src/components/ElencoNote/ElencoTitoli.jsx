@@ -13,6 +13,9 @@ export default function ElencoTitoli({
   setContenuto,
 }) {
 
+
+  //set della nota da redux
+
   const aggiungiNota = () => {
     const nuovaNota = {
       titolo: titolo,
