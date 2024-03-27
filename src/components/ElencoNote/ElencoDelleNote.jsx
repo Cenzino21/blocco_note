@@ -1,14 +1,16 @@
+import { useSelector } from "react-redux";
 import NotaSingola from "./NotaSingola";
 
 export default function ElencoDelleNote({
-  notaCompleta,
   setTitolo,
-  setContenuto,
+  setContenuto
 }) {
-  //Devo leggere tutta la lista delle note tramite redux
+
+  const noteRedux = useSelector((state) => state.note.note); //Sto pushando volta per volta note dentro lo stato di note
+
   return (
     <div>
-      {notaCompleta.map((item, index) => {
+      {noteRedux.map((item, index) => {
         return (
           <NotaSingola 
             titolo={item.titolo} 

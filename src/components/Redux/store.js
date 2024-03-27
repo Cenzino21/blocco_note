@@ -1,20 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
+import noteReducer from "./reducers/noteReducer";
 
 
 export const store =  configureStore({
     reducer: {
-        //Elenco delle note
+        note: noteReducer    
     }
 })
-
-/*import { sliceTheme } from "./themeSlice"
-import themeSlice from "./themeSlice";
-
-export default configureStore({
-
-export const store =  configureStore({
-    reducer: {
-        theme: sliceTheme,
-        theme: themeSlice
-    }
-})*/

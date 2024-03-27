@@ -1,27 +1,21 @@
 import Titolo from "../Titolo";
 import React from "react";
 import ElencoDelleNote from "./ElencoDelleNote";
+import { useDispatch } from "react-redux";
+import { setNote } from "../Redux/reducers/noteReducer";
 
 const titoloDelleNote = "Elenco note";
 
 export default function ElencoTitoli({
-  notaCompleta,
   titolo,
   contenuto,
-  setNotaCompleta,
   setTitolo,
   setContenuto,
 }) {
 
-
-  //set della nota da redux
-
+  const dispatch= useDispatch()
   const aggiungiNota = () => {
-    const nuovaNota = {
-      titolo: titolo,
-      contenuto: contenuto
-    };
-    setNotaCompleta([...notaCompleta, nuovaNota])
+    dispatch(setNote({titolo:titolo, contenuto:contenuto}))
   }
 
   return (
@@ -29,7 +23,6 @@ export default function ElencoTitoli({
       <Titolo titoloNote={titoloDelleNote} />
       <button type="button" onClick={aggiungiNota}>Inserisci nota</button>
       <ElencoDelleNote
-        notaCompleta={notaCompleta}
         setTitolo={setTitolo}
         setContenuto={setContenuto}
       />

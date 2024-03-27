@@ -3,14 +3,12 @@ import React, { useState } from "react";
 
 import CompilaNota from "./components/CompilaNote/CompilaNota";
 import ElencoTitoli from './components/ElencoNote/ElencoTitoli';
-//import { store } from "./components/Redux/store";
   
 //Funzione principale
 export default function App() {
   const [titoloNota, setTitoloNota] = useState();
   const [contenutoNota, setContenutoNota] = useState();
 
-  //const [notaCompleta, setNotaCompleta] = useState([]);
 
   return (
     <div className="App">
