@@ -3,6 +3,7 @@ import React from "react";
 import ElencoDelleNote from "./ElencoDelleNote";
 import { useDispatch } from "react-redux";
 import { setNote } from "../Redux/reducers/noteReducer";
+//import { setUtenti } from "../Redux/reducers/utentiReducer";
 
 const titoloDelleNote = "Elenco note";
 
@@ -13,10 +14,11 @@ export default function ElencoTitoli({
   setContenuto,
 }) {
 
-  const dispatch= useDispatch()
+  const dispatchNote= useDispatch()
   const aggiungiNota = () => {
-    dispatch(setNote({titolo:titolo, contenuto:contenuto}))
+    dispatchNote(setNote({titolo:titolo, contenuto:contenuto}))
   }
+
 
   return (
     <div className="parteNote">

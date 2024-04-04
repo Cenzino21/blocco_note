@@ -3,12 +3,24 @@ import React, { useState } from "react";
 
 import CompilaNota from "./components/CompilaNote/CompilaNota";
 import ElencoTitoli from './components/ElencoNote/ElencoTitoli';
+
+/*
+const url= "https://dummyjson.com/users"
+const api = async () => {
+  const response = await fetch(url)
+  .then(response => response.json())
+  console.log(response);
+}*/
   
 //Funzione principale
 export default function App() {
   const [titoloNota, setTitoloNota] = useState();
-  const [contenutoNota, setContenutoNota] = useState();
+  const [contenutoNota, setContenutoNota] = useState(); 
 
+  /*
+  useEffect(() => {
+    api();
+  }, [])*/
 
   return (
     <div className="App">
