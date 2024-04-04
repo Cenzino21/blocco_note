@@ -1,12 +1,11 @@
-import { setUtenti } from "../Redux/reducers/utentiReducer"
-
-export default function NotaSingola({id, nome, cognome}) {
+export default function NotaSingola({setTitolo, setContenuto, titolo, contenuto}) {
     const visualizzaTitolo = () => {
-        setUtenti(id, nome, cognome);
+        setTitolo(titolo);
+        setContenuto(contenuto);
     }
     return(
         <div onClick={visualizzaTitolo}>
-            {id}{nome}{cognome}
+            {titolo}
         </div>
     )
 }
